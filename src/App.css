@@ -1,0 +1,60 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.47059;
+}
+
+.logo {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-weight: 700;
+    z-index: 99;
+    font-size: 1.9em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 70;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.menu li a {
+    color: white;
+    cursor: pointer;
+    padding: 0 1.1em 1.1em 1.1em;
+    text-decoration: none;
+
+}
+
+.menu .active::after {
+    content: '';
+    margin: 0 1.1em 0 1.1em;
+    height: 2px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+}

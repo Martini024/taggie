@@ -1,0 +1,12 @@
+.intro-wrapper {
+    background-color: #313131;
+    /* border-top: 12px solid white; */
+    height: 100%;
+    padding: 0;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    padding-top: 8%;
+}
