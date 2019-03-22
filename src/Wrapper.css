@@ -1,0 +1,7 @@
+.wrapper {
+    background-color: rgba(41, 42, 54, 0.9);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+}

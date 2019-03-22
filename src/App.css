@@ -1,5 +1,4 @@
 body {
-    background-color: #fff;
     color: #333;
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-size: 14px;
@@ -7,6 +6,7 @@ body {
     font-weight: 400;
     letter-spacing: -.022em;
     line-height: 1.47059;
+    overflow: hidden;
 }
 
 .logo {

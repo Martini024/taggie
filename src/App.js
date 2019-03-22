@@ -5,6 +5,7 @@ import Sunburst from './Sunburst.js';
 import UploadCSV from './UploadCSV.js';
 import Introdection from './Introduction.js';
 import DemoVideo from './DemoVideo.js';
+import Wrapper from './Wrapper.js';
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 
 //Font Awesome
@@ -873,9 +874,15 @@ class App extends Component {
                     </li>
                 </ul>
                 <SectionsContainer {...options}>
-                    <Section><DemoVideo /></Section>
-                    <Section><Introdection /></Section>
-                    <Section>Page 3</Section>
+                    <Section>
+                        <DemoVideo />
+                    </Section>
+                    <Section>
+                        <Introdection />
+                    </Section>
+                    <Section>
+                        <Wrapper />
+                    </Section>
                 </SectionsContainer>
             </>
         );
