@@ -32,7 +32,8 @@ class FileInput extends Component {
         formData.append('file_test', e.target.files[0]);
         formData.append('encoding', 'utf-8');
         formData.append('deal_type', this.state.mode);
-        console.log(this.state.mode);
+        // e.target.files.remove();
+        console.log(    );
         $.ajax({
             url: "http://139.224.116.213/uploadfile",
             type: "POST",
@@ -50,6 +51,7 @@ class FileInput extends Component {
                     'href': 'http://139.224.116.213/download/' + data.filename
                 });
                 $('.spinner').hide(400);
+                $(".fileInput").val('');
             }
         });
     }
