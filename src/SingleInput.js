@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './SingleInput.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import ProgressBar from './ProgressBar.js';
 import $ from "jquery";
 
 class SingleInput extends Component {
@@ -7,15 +9,15 @@ class SingleInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: null,
-            type: null
+            type: ['', '', ''],
+            prob: 0,
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e) {
         var self = this;
-        var value = $("#input").val();
+        var value = $("#singleInput").val();
         const url = "http://139.224.116.213/upload?productname=\"" + value + "\"";
         console.log(url);
         $.ajax({
@@ -26,11 +28,12 @@ class SingleInput extends Component {
             success: function(data) {
                 var res = {};
                 if (data.code === 0) {
-                    res['type'] = data.type;
-                    res['message'] = "success!!!";
+                    res['type'] = data.type.split("--");
+                    res['prob'] = data.prob;
                 } else {
-                    res['type'] = null;
-                    res['message'] = data.message;
+                    res['type'] = ['', '', ''];
+                    res['prob'] = 0;
+                    //alert the error message
                 }
                 self.setState(res);
             }
@@ -39,14 +42,26 @@ class SingleInput extends Component {
 
     render() {
         return (<div className="single-wrapper">
+            <h1 id="singleTitle">Single Mode</h1>
+            <div alt="" id="singleImg"></div>
             <div>
-                <h1>SingleInput</h1>
-                <input id="input"></input>
-                <button onClick={this.handleClick}></button>
+                <input id="singleInput" placeholder="Product Name"></input>
+                <button id="singleCommit" onClick={this.handleClick}>Get Started!</button>
             </div>
             <div>
-                <h1>{this.state.message}</h1>
-                <h1>{this.state.type}</h1>
+                {
+                    this.state.type.length !== 0
+                        ? <div>
+                                <button id="type1" className="btn singleType">{this.state.type[0]}</button>
+                                <button id="type2" className="btn singleType">{this.state.type[1]}</button>
+                                <button id="type3" className="btn singleType">{this.state.type[2]}</button>
+                            </div>
+                        : null
+                }
+
+            </div>
+            <div>
+                <ProgressBar now={this.state.prob}/>
             </div>
         </div>);
     }

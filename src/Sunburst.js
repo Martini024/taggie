@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from 'react';
+import React, {Component} from 'react';
 import * as d3 from "d3";
 import "./Sunburst.css";
 
@@ -13,6 +11,7 @@ class Sunburst extends Component {
         }
     }
     componentDidMount() {
+        console.log(this.state.data);
         this.drawChart(this.state.data);
     }
 
@@ -32,7 +31,7 @@ class Sunburst extends Component {
     }
 
     labelVisible(d) {
-        return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;
+        return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.1;
     }
 
     labelTransform(d, radius) {
@@ -42,7 +41,10 @@ class Sunburst extends Component {
     }
 
     drawChart() {
-        const svg = d3.select("svg")
+
+        const svg = d3.select(".sunburst")
+        const width = parseInt(svg.style('width'));
+        const paddingTop = parseInt(svg.style('padding-top'));
 
         const root = this.partition(this.state.data);
         root.each(d => d.current = d);
@@ -51,7 +53,7 @@ class Sunburst extends Component {
 
         const format = d3.format(",d")
 
-        const radius = Math.min(parseInt(svg.style('width')), parseInt(svg.style('height'))) / 6 - parseInt(svg.style('padding-top'));
+        const radius = width / 6 - paddingTop;
 
         const arc = d3.arc()
             .startAngle(d => d.x0)
@@ -99,7 +101,7 @@ class Sunburst extends Component {
 
         //2. Create the group
         const g = svg.append("g")
-            .attr("transform", `translate(${parseInt(svg.style('width')) / 2},${parseInt(svg.style('height')) / 2})`);
+            .attr("transform", `translate(${(width - paddingTop) / 2},${(width - paddingTop) / 2})`);
 
         const path = g.selectAll("path")
             .data(root.descendants().slice(1))
@@ -115,7 +117,7 @@ class Sunburst extends Component {
             .style("cursor", "pointer").on("click", clicked);
 
         path.append("title")
-            .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+            .text(d => `Type: ${d.ancestors().map(d => d.data.name).reverse().join("-")}\nNumebr: ${format(d.value)}`);
 
         var label = g.append("g")
             .attr("pointer-events", "none")
@@ -140,7 +142,7 @@ class Sunburst extends Component {
     }
 
     render() {
-        return <svg></svg>;
+        return <svg className="sunburst"></svg>;
     }
 
 }

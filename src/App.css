@@ -6,14 +6,15 @@ body {
     font-weight: 400;
     letter-spacing: -.022em;
     line-height: 1.47059;
-    overflow: hidden;
+    /* overflow: hidden; */
+    width: 100%;
 }
 
 .logo {
     cursor: pointer;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 2%;
+    left: 2%;
     color: #fff;
     font-weight: 700;
     z-index: 99;
@@ -24,8 +25,8 @@ body {
 
 .menu {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 2%;
+    right: 1%;
     z-index: 70;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;

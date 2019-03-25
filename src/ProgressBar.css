@@ -1,17 +1,22 @@
-.video-wrapper {
+.progress {
+    display: flex;
+    height: 24px;
+}
+
+.progressBar {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
     background: #134E5E;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #71B280, #134E5E);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #71B280, #134E5E);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: center;
-}
-
-.demoVideo {
-    width: 100%;
-    height: 100%;
+    transition: width .6s ease;
 }

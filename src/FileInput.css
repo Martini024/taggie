@@ -3,9 +3,72 @@
     /* border: 1px solid black; */
     max-height: 100%;
     /* padding: 10px; */
-    width: 30%;
-    height: 80%;
-    margin: 100px 12px 12px 46px;
-    border-radius: 12px;
-    box-shadow: 3px 3px 13px 1px rgba(0,0,0,0.84);
+    width: 400px;
+    height: 400px;
+    margin: 140px 12px 12px 46px;
+    padding: 30px 40px 40px 40px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.48);
+    text-align: center;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.canvas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.showCanvas {
+    background-color: rgb(57,210,180);
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    width: 45%;
+    margin-right: 5%;
+}
+
+.showCanvas:hover {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+.popup-content {
+    background-color: white!important;
+    border-radius: 35px;
+    box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.48);
+    width: 50%!important;
+    padding-top: 50%!important; /* 1:1 Aspect Ratio */
+    position: relative!important; /* If you want text inside of it */
+}
+
+.popup-overlay {
+    background-color: rgba(255,255,255,0.7)!important;
+top: 66.7%!important;
+}
+
+#fileTitle {
+    text-align: center;
+    font-size: 32px;
+}
+
+#fileImg {
+    width: 320px;
+    height: 150px;
+    margin-bottom: 12px;
+    /* border: 1px solid white; */
+    background: center / contain no-repeat url(./img/box-pile.jpg);
+    background-size: contain;
 }

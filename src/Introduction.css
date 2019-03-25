@@ -1,6 +1,10 @@
 .intro-wrapper {
-    background-color: rgb(41, 42, 54);
-    /* border-top: 12px solid white; */
+    background: #134E5E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #71B280, #134E5E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #71B280, #134E5E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100%;
     padding: 0;
 }
@@ -9,4 +13,64 @@
     color: white;
     text-align: center;
     padding-top: 8%;
+}
+
+#excel {
+    width: 14%;
+    height: 30%;
+    background: center no-repeat url(./img/excel.png);
+    background-size: contain;
+    position: fixed;
+    top: 35%;
+    left: 10%;
+}
+
+#broswer {
+    width: 36%;
+    height: 36%;
+    background: center no-repeat url(./img/browser.png);
+    background-size: contain;
+    position: fixed;
+    top: 32%;
+    left: 32%;
+}
+
+#excel-with-content {
+    width: 14%;
+    height: 30%;
+    background: center no-repeat url(./img/excel\ with\ content.png);
+    background-size: contain;
+    position: fixed;
+    top: 35%;
+    right: 10%;
+}
+
+#description {
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 59%;
+    font-size: 2rem;
+    text-align: left;
+    margin: 0 15%;
+}
+
+.arrowLeft {
+    width: 6%;
+    height: 6%;
+    background: center no-repeat url(./img/arrow.png);
+    background-size: contain;
+    position: fixed;
+    top: 47%;
+    left: 25%;
+}
+
+.arrowRight {
+    width: 6%;
+    height: 6%;
+    background: center no-repeat url(./img/arrow.png);
+    background-size: contain;
+    position: fixed;
+    top: 47%;
+    right: 25%;
 }

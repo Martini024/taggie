@@ -14,7 +14,7 @@ class DemoVideo extends Component {
     render() {
         return (
             <div className="video-wrapper">
-                <video src={ this.state.video } poster={ this.state.poster } controls>
+                <video className="demoVideo" src={ this.state.video } poster={ this.state.poster } controls>
                 </video>
             </div>
         );

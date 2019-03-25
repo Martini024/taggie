@@ -1,0 +1,21 @@
+#download {
+    background-color: rgb(57,210,180);
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    width: 45%;
+    margin-left: 5%;
+}
+
+#download:hover {
+    background: #34495E;
+    color: #39D2B4;
+}
