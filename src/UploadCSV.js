@@ -8,7 +8,7 @@ class UploadCSV extends Component {
             <div className="fileContainer">
                 <input className="fileInput" type="file" name="Upload" accept=".csv" id="csvFileUpload"  onChange={this.props.handleFileUpload} />
                 <label className="fileInputLabel">Upload CSV</label>
-                <ModeSelect />
+                <ModeSelect handleChange={this.props.handleChange} mode={this.props.mode}/>
             </div>
 
         );

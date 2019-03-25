@@ -3,22 +3,19 @@ import './ModeSelect.css';
 
 class ModeSelect extends Component {
 
-    constructor() {
-        super()
-        this.state = {
-            mode: "",
-        }
-        this.handleChange = this.handleChange.bind(this)
-    }
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         mode: "",
+    //     }
+    //     // this.handleChange = this.handleChange.bind(this)
+    // }
 
-    handleChange(event) {
-        const {name, value} = event.target
-        this.setState({[name]: value})
-    }
+
 
     render() {
         return (
-            <select id="modeSelect" value={this.state.mode} name="mode" onChange={this.handleChange}>
+            <select id="modeSelect" value={this.props.mode} name="mode" onChange={this.props.handleChange}>
                 <option defaultValue value="0">Precision Priority</option>
                 <option value="1">Efficiency Priority</option>
             </select>

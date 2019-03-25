@@ -14,8 +14,15 @@ class FileInput extends Component {
             data : null,
             open : false,
             href : null,
+            mode : 0,
         };
         this.handleFileUpload = this.handleFileUpload.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const {name, value} = event.target
+        this.setState({[name]: value})
     }
 
     handleFileUpload(e) {
@@ -24,6 +31,8 @@ class FileInput extends Component {
         let formData = new FormData();
         formData.append('file_test', e.target.files[0]);
         formData.append('encoding', 'utf-8');
+        formData.append('deal_type', this.state.mode);
+        console.log(this.state.mode);
         $.ajax({
             url: "http://139.224.116.213/uploadfile",
             type: "POST",
@@ -35,7 +44,11 @@ class FileInput extends Component {
             success: function(data, status) {
                 data.results.name = "";
                 data.filename = data.filename.split('/').pop();
-                self.setState({'code': data.code, 'data': data.results, 'href': 'http://139.224.116.213/download/' + data.filename});
+                self.setState({
+                    'code': data.code,
+                    'data': data.results,
+                    'href': 'http://139.224.116.213/download/' + data.filename
+                });
                 $('.spinner').hide(400);
             }
         });
@@ -45,7 +58,7 @@ class FileInput extends Component {
         return (<div className="file-wrapper">
             <h1 id="fileTitle">Batch Mode</h1>
             <div alt="" id="fileImg"></div>
-            <UploadCSV handleFileUpload={this.handleFileUpload}/>
+            <UploadCSV handleFileUpload={this.handleFileUpload} handleChange={this.handleChange} mode={this.state.mode}/>
             <Popup trigger={<button className="showCanvas"> Open Modal < /button>} modal={true} closeOnDocumentClick={true}>
                 <div className="canvas">
                     {

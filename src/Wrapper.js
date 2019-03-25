@@ -7,9 +7,7 @@ class Wrapper extends Component {
     render() {
         return (
             <div className="wrapper">
-                <div className="spinner">
-                    
-                </div>
+                <div className="spinner"></div>
                 <SingleInput />
                 <FileInput />
             </div>
