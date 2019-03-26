@@ -1,17 +1,15 @@
 .single-wrapper {
     background-color: white;
-    /* border: 1px solid black; */
-    max-height: 100%;
-    /* padding: 10px; */
     width: 400px;
     height: 400px;
-    margin: 200px 46px 12px 12px;
-    padding: 30px 40px 40px 40px;
+    margin: 13% 3.3% 0 4%;
+    padding: 2%;
     border-radius: 30px;
     box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.48);
     text-align: center;
     font-family: "Lato";
     font-weight: 400;
+    transition: transform 2.5s cubic-bezier(.03,.965,.25,.975),box-shadow 2.5s cubic-bezier(.03,.965,.25,.975);
 }
 
 #singleTitle {
@@ -20,10 +18,9 @@
 }
 
 #singleImg {
-    width: 320px;
-    height: 150px;
-    border: 0px solid transparent;
-    margin-bottom: 12px;
+    width: 100%;
+    height: 45%;
+    margin-bottom: 4%;
     background: center no-repeat url(./img/box.jpg);
     background-size: contain;
 }
@@ -32,8 +29,8 @@
     background-color: rgb(239, 239, 240);
     border: 2px solid rgba(28,188,155,0.5);
     border-radius: 3px;
-    height: 38px;
-    margin-right: 10px;
+    height: 3%;
+    margin-right: 3%;
     outline: none;
     display: inline-block;
     font-weight: 400;
@@ -43,6 +40,7 @@
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
+    width: 60%;
 }
 
 #singleInput:hover {
@@ -67,6 +65,10 @@
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
+    width: 37%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #singleCommit:hover {
@@ -86,19 +88,27 @@
     vertical-align: middle;
     font-size: 1rem;
     width: 30%;
-    margin: 16px 0;
+    margin: 4% 0;
     border-radius: 30px!important;
     height: 38px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.singleType:hover {
+    overflow: scroll;
+    text-overflow: inherit;
 }
 
 #type1 {
     background-color: #38ada9!important;
-    margin-right: 8px;
+    margin-right: 5%;
 }
 
 #type2 {
     background-color: #78e08f!important;
-    margin-right: 8px;
+    margin-right: 5%;
 }
 
 #type3 {

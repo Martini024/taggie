@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
+import DemoVideo from './DemoVideo.js';
+import Introdection from './Introduction.js';
+import Wrapper from './Wrapper.js';
+import {SectionsContainer, Section} from 'react-fullpage';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTags } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import Sunburst from './Sunburst.js';
-import UploadCSV from './UploadCSV.js';
-import Introdection from './Introduction.js';
-import DemoVideo from './DemoVideo.js';
-import Wrapper from './Wrapper.js';
-import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 
-//Font Awesome
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTags } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faTags)
+library.add(faTags);
 
 class App extends Component {
 

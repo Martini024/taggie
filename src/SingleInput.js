@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
-import './SingleInput.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import $ from 'jquery';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTags } from '@fortawesome/free-solid-svg-icons';
 import ProgressBar from './ProgressBar.js';
-import $ from "jquery";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './SingleInput.css';
+
+library.add(faTags);
 
 class SingleInput extends Component {
 
@@ -19,7 +24,6 @@ class SingleInput extends Component {
         var self = this;
         var value = $("#singleInput").val();
         const url = "http://139.224.116.213/upload?productname=\"" + value + "\"";
-        console.log(url);
         $.ajax({
             url: url,
             type: "GET",
@@ -33,7 +37,7 @@ class SingleInput extends Component {
                 } else {
                     res['type'] = ['', '', ''];
                     res['prob'] = 0;
-                    //alert the error message
+                    alert(data.message);
                 }
                 self.setState(res);
             }
@@ -51,14 +55,13 @@ class SingleInput extends Component {
             <div>
                 {
                     this.state.type.length !== 0
-                        ? <div>
-                                <button id="type1" className="btn singleType">{this.state.type[0]}</button>
-                                <button id="type2" className="btn singleType">{this.state.type[1]}</button>
-                                <button id="type3" className="btn singleType">{this.state.type[2]}</button>
+                        ? <div className="typeGroup">
+                                <label id="type1" className="btn singleType"><FontAwesomeIcon icon="tags" />{this.state.type[0]}</label>
+                                <label id="type2" className="btn singleType"><FontAwesomeIcon icon="tags" />{this.state.type[1]}</label>
+                                <label id="type3" className="btn singleType"><FontAwesomeIcon icon="tags" />{this.state.type[2]}</label>
                             </div>
                         : null
                 }
-
             </div>
             <div>
                 <ProgressBar now={this.state.prob}/>

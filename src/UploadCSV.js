@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./UploadCSV.css"
 import ModeSelect from './ModeSelect.js';
+import "./UploadCSV.css"
 
 class UploadCSV extends Component {
     render() {

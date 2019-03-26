@@ -11,7 +11,6 @@ class Sunburst extends Component {
         }
     }
     componentDidMount() {
-        console.log(this.state.data);
         this.drawChart(this.state.data);
     }
 
@@ -41,7 +40,6 @@ class Sunburst extends Component {
     }
 
     drawChart() {
-
         const svg = d3.select(".sunburst")
         const width = parseInt(svg.style('width'));
         const paddingTop = parseInt(svg.style('padding-top'));

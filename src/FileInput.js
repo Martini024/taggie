@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import './FileInput.css';
-import UploadCSV from './UploadCSV.js';
 import $ from 'jquery';
-import Sunburst from './Sunburst.js';
 import Popup from "reactjs-popup";
+import UploadCSV from './UploadCSV.js';
+import Sunburst from './Sunburst.js';
 import DownloadCSV from './DownloadCSV.js';
+import './FileInput.css';
+
 
 class FileInput extends Component {
     constructor(props) {

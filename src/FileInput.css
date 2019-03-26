@@ -1,12 +1,9 @@
 .file-wrapper {
     background-color: white;
-    /* border: 1px solid black; */
-    max-height: 100%;
-    /* padding: 10px; */
     width: 400px;
     height: 400px;
-    margin: 140px 12px 12px 46px;
-    padding: 30px 40px 40px 40px;
+    margin: 9% 4% 0 3.3%;
+    padding: 2%;
     border-radius: 30px;
     box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.48);
     text-align: center;
@@ -50,8 +47,8 @@
     border-radius: 35px;
     box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.48);
     width: 50%!important;
-    padding-top: 50%!important; /* 1:1 Aspect Ratio */
-    position: relative!important; /* If you want text inside of it */
+    padding-top: 50%!important;
+    position: relative!important;
 }
 
 .popup-overlay {
@@ -65,10 +62,9 @@ top: 66.7%!important;
 }
 
 #fileImg {
-    width: 320px;
-    height: 150px;
-    margin-bottom: 12px;
-    /* border: 1px solid white; */
+    width: 100%;
+    height: 45%;
+    margin-bottom: 2%;
     background: center / contain no-repeat url(./img/box-pile.jpg);
     background-size: contain;
 }

@@ -5,7 +5,6 @@ class DemoVideo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // heading: props.heading,
             video: props.video,
             poster: props.poster,
         }
@@ -14,7 +13,7 @@ class DemoVideo extends Component {
     render() {
         return (
             <div className="video-wrapper">
-                <video className="demoVideo" src={ this.state.video } poster={ this.state.poster } controls>
+                <video className="demoVideo" src={ this.state.video } poster={ this.state.poster} controls>
                 </video>
             </div>
         );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Wrapper.css';
 import SingleInput from './SingleInput.js';
 import FileInput from './FileInput.js';
+import './Wrapper.css';
 
 class Wrapper extends Component {
     render() {
