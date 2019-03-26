@@ -12,8 +12,7 @@ class Introduction extends Component {
                 <div className="arrowRight"></div>
                 <div id="excel-with-content"></div>
                 <h1 id="description">Sunt reprehenderit doctrina aliqua excepteur si sed nulla eu enim ab iudicem
-                aliqua export quibusdam quae id velit ingeniis efflorescere. Nam malis et labore
-                id summis est appellat, est enim nisi do iudicem, eu
+                aliqua export quibusdam quae id velit ingeniis efflorescere. Nam malis et
                 </h1>
             </div>
         );
