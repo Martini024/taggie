@@ -1,13 +1,15 @@
 {
-    "name": "react-d3",
+    "name": "taggie",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://martini024.github.io/taggie",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.16",
         "@fortawesome/free-solid-svg-icons": "^5.8.0",
         "@fortawesome/react-fontawesome": "^0.1.4",
         "bootstrap": "^4.3.1",
         "d3": "^5.9.1",
+        "gh-pages": "^2.0.1",
         "i": "^0.3.6",
         "jquery": "^3.3.1",
         "npm": "^6.9.0",
@@ -21,6 +23,8 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
