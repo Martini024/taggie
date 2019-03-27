@@ -19,7 +19,7 @@ class App extends Component {
             anchors: [
                 'sectionOne', 'sectionTwo', 'sectionThree'
             ],
-            arrowNavigation: true,
+            arrowNavigation: false,
             className: 'SectionContainer',
             delay: 700,
             navigation: false,
