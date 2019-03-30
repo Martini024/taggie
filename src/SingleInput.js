@@ -23,7 +23,7 @@ class SingleInput extends Component {
     handleClick(e) {
         var self = this;
         var value = $("#singleInput").val();
-        const url = "https://139.224.116.213/upload?productname=\"" + value + "\"";
+        const url = "https://taggie.tech/upload?productname=\"" + value + "\"";
         $.ajax({
             url: url,
             type: "GET",

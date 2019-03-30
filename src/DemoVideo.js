@@ -2,19 +2,10 @@ import React, { Component } from 'react';
 import './DemoVideo.css';
 
 class DemoVideo extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            video: props.video,
-            poster: props.poster,
-        }
-    }
-
     render() {
         return (
             <div className="video-wrapper">
-                <video className="demoVideo" src={ this.state.video } poster={ this.state.poster} controls>
-                </video>
+                <video src="./video/Demo/Taggie.m4v" className="demoVideo" controls autoPlay muted playsInline type="video/mp4"></video>
             </div>
         );
     }

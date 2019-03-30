@@ -36,7 +36,7 @@ class FileInput extends Component {
         // e.target.files.remove();
         console.log(    );
         $.ajax({
-            url: "https://139.224.116.213/uploadfile",
+            url: "https://taggie.tech/uploadfile",
             type: "POST",
             data: formData,
             dataType: "json",
@@ -49,7 +49,7 @@ class FileInput extends Component {
                 self.setState({
                     'code': data.code,
                     'data': data.results,
-                    'href': 'https://139.224.116.213/download/' + data.filename
+                    'href': 'https://taggie.tech/download/' + data.filename
                 });
                 $('.spinner').hide(400);
                 $(".fileInput").val('');
