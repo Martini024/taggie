@@ -2,7 +2,7 @@
     "name": "taggie",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://martini024.github.io/taggie",
+    "homepage": "https://martini024.github.io/taggie/en",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.16",
         "@fortawesome/free-solid-svg-icons": "^5.8.0",

@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 import './DemoVideo.css';
 
 class DemoVideo extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            video: props.video,
-            poster: props.poster,
-        }
-    }
-
     render() {
         return (
             <div className="video-wrapper">
-                <video className="demoVideo" src={ this.state.video } poster={ this.state.poster} controls>
+                <video className="demoVideo" controls>
+                    <source src={this.props.video} type="video/mp4"/>
+                Your browser does not support the video tag.
                 </video>
             </div>
         );

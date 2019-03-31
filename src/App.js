@@ -32,6 +32,9 @@ class App extends Component {
                 <h1 className="logo"><FontAwesomeIcon icon="tags" /> Taggie</h1>
                 <ul className="menu">
                     <li>
+                        <a href="http://martini024.github.io/taggie/ch">Chinese/English</a>
+                    </li>
+                    <li>
                         <a href="#sectionOne" className="active">Demo Video</a>
                     </li>
                     <li>
@@ -43,7 +46,7 @@ class App extends Component {
                 </ul>
                 <SectionsContainer {...options}>
                     <Section>
-                        <DemoVideo />
+                        <DemoVideo video="https://taggie.tech./download/demo.mp4"/>
                     </Section>
                     <Section>
                         <Introdection />
