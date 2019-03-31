@@ -1,5 +1,5 @@
 {
-  "main.css": "/taggie/static/css/main.cfd7e624.chunk.css",
+  "main.css": "/taggie/static/css/main.c5beda09.chunk.css",
   "main.js": "/taggie/static/js/main.490c8a92.chunk.js",
   "main.js.map": "/taggie/static/js/main.490c8a92.chunk.js.map",
   "runtime~main.js": "/taggie/static/js/runtime~main.9421bc00.js",
@@ -8,10 +8,10 @@
   "static/js/2.b4bc1728.chunk.js": "/taggie/static/js/2.b4bc1728.chunk.js",
   "static/js/2.b4bc1728.chunk.js.map": "/taggie/static/js/2.b4bc1728.chunk.js.map",
   "index.html": "/taggie/index.html",
-  "precache-manifest.3e4c059e0c27b92ed60b50d402157bbf.js": "/taggie/precache-manifest.3e4c059e0c27b92ed60b50d402157bbf.js",
+  "precache-manifest.02908fc3d29b0b81c38f30127656c409.js": "/taggie/precache-manifest.02908fc3d29b0b81c38f30127656c409.js",
   "service-worker.js": "/taggie/service-worker.js",
   "static/css/2.ec700c6e.chunk.css.map": "/taggie/static/css/2.ec700c6e.chunk.css.map",
-  "static/css/main.cfd7e624.chunk.css.map": "/taggie/static/css/main.cfd7e624.chunk.css.map",
+  "static/css/main.c5beda09.chunk.css.map": "/taggie/static/css/main.c5beda09.chunk.css.map",
   "static/media/FileInput.css": "/taggie/static/media/box-pile.42fa0ca4.jpg",
   "static/media/SingleInput.css": "/taggie/static/media/box.a7c092e1.jpg",
   "static/media/Introduction.css": "/taggie/static/media/excel with content.ba2c7bc5.png"
