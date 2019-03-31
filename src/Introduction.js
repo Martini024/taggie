@@ -11,9 +11,8 @@ class Introduction extends Component {
                 <div id="broswer"></div>
                 <div className="arrowRight"></div>
                 <div id="excel-with-content"></div>
-                <h1 id="description">Sunt reprehenderit doctrina aliqua excepteur si sed nulla eu enim ab iudicem
-                aliqua export quibusdam quae id velit ingeniis efflorescere. Nam malis et
-                </h1>
+                <h1 id="single-description">In single mode, input the product name, output the classification result and the accuracy.</h1>
+                <h1 id="batch-description">In batch mode, input the csv file having only one column ITEM_NAME, output the sunburst diagram (data visualization) and user can download the classified file.</h1>
             </div>
         );
     }
