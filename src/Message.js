@@ -32,13 +32,13 @@ export default {
         "file.mode" : "批处理模式",
         "file.sunburst" : "可视化模型",
         "file.downloadCSV" : "下载测试文件",
-        "file.uploadCSV" : "上传测试文件",
+        "file.uploadCSV" : "上传待分类文件",
         "file.download" : "预测结果下载",
         "file.modeSelect1" : "效率优先",
         "file.modeSelect2" : "精度优先",
         "single.progress" : "可信度      ",
         "single.mode" : "单输入模式",
         "single.start" : "提交",
-        "single.input" : "输入",
+        "single.input" : "输入产品名称",
     }
 }
