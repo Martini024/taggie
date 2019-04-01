@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "ace893bad486dce20b25",
-    "url": "/taggie/static/css/main.cf9b8b11.chunk.css"
+    "revision": "b107dda60bc93c449720",
+    "url": "/taggie/static/css/main.ff4bd629.chunk.css"
   },
   {
-    "revision": "ace893bad486dce20b25",
+    "revision": "b107dda60bc93c449720",
     "url": "/taggie/static/js/main.b5d2cc08.chunk.js"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/taggie/static/media/box-pile.0a5b3d1c.jpg"
   },
   {
-    "revision": "e578982d2e9d1533b47478bb7280bf2e",
+    "revision": "3a9e991c1027f00eaca868764c888f5c",
     "url": "/taggie/index.html"
   }
 ];
