@@ -59,12 +59,13 @@ class FileInput extends Component {
     }
 
     render() {
+        const time = new Date().getTime();
         return (<div className="file-wrapper">
             <h1 id="fileTitle">
                 <FormattedMessage id="file.mode" defaultMessage="Batch Mode"/>
             </h1>
             <div alt="" id="fileImg"></div>
-            <DownloadExampleCSV href="https://taggie.tech./download/demo.csv"/>
+            <DownloadExampleCSV href={"https://taggie.tech./download/demo.csv?time=" + time}/>
             <UploadCSV handleFileUpload={this.handleFileUpload} handleChange={this.handleChange} mode={this.state.mode} encoding={this.state.encoding}/>
             <Popup trigger={<button className="showCanvas"> <FormattedMessage id="file.sunburst" defaultMessage="Open Model"/>
              < /button>} modal={true} closeOnDocumentClick={true}>
