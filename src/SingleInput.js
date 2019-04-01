@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import ProgressBar from './ProgressBar.js';
 import $ from 'jquery';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTags } from '@fortawesome/free-solid-svg-icons';
-import ProgressBar from './ProgressBar.js';
+import { FormattedMessage } from 'react-intl';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SingleInput.css';
 
@@ -46,11 +47,21 @@ class SingleInput extends Component {
 
     render() {
         return (<div className="single-wrapper">
-            <h1 id="singleTitle">Single Mode</h1>
+            <h1 id="singleTitle">
+                <FormattedMessage id="single.mode" defaultMessage="Single Mode"/>
+            </h1>
             <div alt="" id="singleImg"></div>
             <div>
-                <input id="singleInput" placeholder="Product Name"></input>
-                <button id="singleCommit" onClick={this.handleClick}>Get Started!</button>
+                <FormattedMessage id="single.input" defaultMessage="Product Name">
+                    {
+                        placeholder => (
+                            <input id="singleInput" placeholder={placeholder} />
+                        )
+                    }
+                </FormattedMessage>
+                <button id="singleCommit" onClick={this.handleClick}>
+                    <FormattedMessage id="single.start" defaultMessage="Get Started!"/>
+                </button>
             </div>
             <div>
                 {

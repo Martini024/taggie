@@ -48,7 +48,6 @@ body {
     cursor: pointer;
     padding: 0 1.1em 1.1em 1.1em;
     text-decoration: none;
-
 }
 
 .menu .active::after {

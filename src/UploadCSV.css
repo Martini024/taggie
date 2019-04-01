@@ -7,13 +7,14 @@
     display: block;
     text-align: center;
     vertical-align: middle;
-    padding: .375rem .75rem;
+    padding: .3rem .75rem;
     background: #39D2B4;
     color: #fff;
     font-size: 1em;
     transition: all .4s;
     cursor: pointer;
     border-radius: 0.25rem;
+    margin-bottom: 3%;
 }
 
 .fileInput {

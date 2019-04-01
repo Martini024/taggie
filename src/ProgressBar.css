@@ -1,10 +1,8 @@
 .progress {
-    display: flex;
     height: 24px;
 }
 
 .progressBar {
-    display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-pack: center;
@@ -19,4 +17,8 @@
     background: linear-gradient(to left, #71B280, #134E5E);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: width .6s ease;
+}
+
+.progressBar span {
+    display: inline-block;
 }

@@ -1,4 +1,4 @@
-#download {
+#downloadExample {
     background-color: rgb(57,210,180);
     border: none;
     outline: none;
@@ -7,15 +7,16 @@
     color: white;
     text-align: center;
     vertical-align: middle;
-    padding: .2rem .75rem;
+    padding: .3rem .75rem;
     font-size: 1em;
     line-height: 1.5;
     border-radius: .25rem;
-    width: 46%;
-    margin-left: 4%;
+    width: 100%;
+    margin-bottom: 3%;
+    text-decoration: none;
 }
 
-#download:hover {
+#downloadExample:hover {
     background: #34495E;
     color: #39D2B4;
 }

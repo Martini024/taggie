@@ -1,15 +1,15 @@
-#modeSelect {
+#encodingSelect {
     width: 46%;
-    padding: .5rem .75rem;
+    padding: .4rem .75rem;
 	cursor: pointer;
 	background-color: white;
 	border-radius: 0.25rem;
     border: 2px solid rgba(28,188,155,0.5);
     outline: none;
-    margin: 0 4% 3% 0;
+    margin: 0 0 3% 4%;
 }
 
-#modeSelect:hover {
+#encodingSelect:hover {
     border: 2px solid rgb(28,188,155);
     transition: all 0.4s ease-in-out 0s;
 }

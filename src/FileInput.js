@@ -4,6 +4,8 @@ import Popup from "reactjs-popup";
 import UploadCSV from './UploadCSV.js';
 import Sunburst from './Sunburst.js';
 import DownloadCSV from './DownloadCSV.js';
+import DownloadExampleCSV from './DownloadExampleCSV.js';
+import { FormattedMessage } from 'react-intl';
 import './FileInput.css';
 
 
@@ -16,6 +18,7 @@ class FileInput extends Component {
             open : false,
             href : null,
             mode : 0,
+            encoding : "gb18030",
         };
         this.handleFileUpload = this.handleFileUpload.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -31,10 +34,8 @@ class FileInput extends Component {
         const self = this;
         let formData = new FormData();
         formData.append('file_test', e.target.files[0]);
-        formData.append('encoding', 'utf-8');
+        formData.append('encoding', this.state.encoding);
         formData.append('deal_type', this.state.mode);
-        // e.target.files.remove();
-        console.log(    );
         $.ajax({
             url: "https://taggie.tech./uploadfile",
             type: "POST",
@@ -59,10 +60,14 @@ class FileInput extends Component {
 
     render() {
         return (<div className="file-wrapper">
-            <h1 id="fileTitle">Batch Mode</h1>
+            <h1 id="fileTitle">
+                <FormattedMessage id="file.mode" defaultMessage="Batch Mode"/>
+            </h1>
             <div alt="" id="fileImg"></div>
-            <UploadCSV handleFileUpload={this.handleFileUpload} handleChange={this.handleChange} mode={this.state.mode}/>
-            <Popup trigger={<button className="showCanvas"> Open Modal < /button>} modal={true} closeOnDocumentClick={true}>
+            <DownloadExampleCSV href="https://taggie.tech./download/demo.csv"/>
+            <UploadCSV handleFileUpload={this.handleFileUpload} handleChange={this.handleChange} mode={this.state.mode} encoding={this.state.encoding}/>
+            <Popup trigger={<button className="showCanvas"> <FormattedMessage id="file.sunburst" defaultMessage="Open Model"/>
+             < /button>} modal={true} closeOnDocumentClick={true}>
                 <div className="canvas">
                     {
                         this.state.code === 0
